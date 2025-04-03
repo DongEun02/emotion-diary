@@ -1,0 +1,35 @@
+.WeatherItem {
+  background-color: rgb(236, 236, 236);
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+
+  width: 45px;
+  height: 35px;
+}
+
+.WeatherItem .weather_img {
+  width: 70%;
+  margin-bottom: 2px;
+}
+
+.WeatherItem_on_1 {
+  color: white;
+  background-color: rgb(79, 179, 233);
+}
+
+.WeatherItem_on_2 {
+  color: white;
+  background-color: rgb(79, 179, 233);
+}
+
+.WeatherItem_on_3 {
+  color: white;
+  background-color: rgb(79, 179, 233);
+}
+
+.WeatherItem_on_4 {
+  color: white;
+  background-color: rgb(79, 179, 233);
+}

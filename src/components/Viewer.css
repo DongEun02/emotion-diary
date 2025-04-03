@@ -1,6 +1,6 @@
 .Viewer > section {
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
   display: flex;
   flex-direction: column;
@@ -14,8 +14,8 @@
 }
 
 .Viewer .emotion_img_wrapper {
-  width: 250px;
-  height: 250px;
+  width: 180px;
+  height: 180px;
   border-radius: 5px;
 
   display: flex;
@@ -45,6 +45,19 @@
 
 .Viewer .emotion_img_wrapper_5 {
   background-color: rgb(253, 86, 95);
+}
+
+.Viewer .weather_img_wrapper {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  background-color: rgb(79, 179, 233);
+  border-radius: 5px;
+
+  color: white;
+  font-size: 20px;
 }
 
 .Viewer .content_wrapper {

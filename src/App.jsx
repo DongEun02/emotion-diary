@@ -99,7 +99,7 @@ function App() {
   }, []);
 
   // 새로운 일기 추가
-  const onCreate = (createdDate, emotionId, content) => {
+  const onCreate = (createdDate, emotionId, weatherId, content) => {
     // 새로운 일기를 추가하는 기능
     dispatch({
       type: "CREATE",
@@ -107,13 +107,14 @@ function App() {
         id: idRef.current++,
         createdDate,
         emotionId,
+        weatherId,
         content,
       },
     });
   };
 
   // 기존 일기 수정
-  const onUpdate = (id, createdDate, emotionId, content) => {
+  const onUpdate = (id, createdDate, emotionId, weatherId, content) => {
     // 기존 일기를 수정하는 기능
     dispatch({
       type: "UPDATE",
@@ -121,6 +122,7 @@ function App() {
         id,
         createdDate,
         emotionId,
+        weatherId,
         content,
       },
     });

@@ -17,7 +17,7 @@ const Diary = () => {
     return <div>데이터 로딩중...!</div>;
   }
 
-  const { createdDate, emotionId, content } = curDiaryItem;
+  const { createdDate, emotionId, weatherId, content } = curDiaryItem;
   const title = getStringedDate(new Date(createdDate));
 
   return (
@@ -29,7 +29,7 @@ const Diary = () => {
           <Button onClick={() => nav(`/edit/${params.id}`)} text={"수정하기"} />
         }
       />
-      <Viewer emotionId={emotionId} content={content} />
+      <Viewer emotionId={emotionId} weatherId={weatherId} content={content} />
     </div>
   );
 };

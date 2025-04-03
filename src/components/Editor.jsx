@@ -4,7 +4,9 @@ import Button from "./Button";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { emotionList } from "../util/constants";
+import { weatherList } from "../util/weather-const";
 import { getStringedDate } from "../util/get-stringed-date";
+import WeatherItem from "./WeatherItem";
 
 const Editor = ({ initData, onSubmit }) => {
   const nav = useNavigate();
@@ -12,6 +14,7 @@ const Editor = ({ initData, onSubmit }) => {
   const [input, setInput] = useState({
     createdDate: new Date(),
     emotionId: 3,
+    weatherList: 3,
     content: "",
   });
 
@@ -44,14 +47,36 @@ const Editor = ({ initData, onSubmit }) => {
 
   return (
     <div className="Editor">
-      <section className="date_section">
-        <h4>오늘의 날짜</h4>
-        <input
-          name="createdDate"
-          onChange={onChangeInput}
-          value={getStringedDate(input.createdDate)}
-          type="date"
-        />
+      <section className="date-weather_section">
+        <section className="date_section">
+          <h4>오늘의 날짜</h4>
+          <input
+            name="createdDate"
+            onChange={onChangeInput}
+            value={getStringedDate(input.createdDate)}
+            type="date"
+          />
+        </section>
+        <section className="weather_section">
+          <h4>오늘의 날씨</h4>
+          <div className="weather_list_wrapper">
+            {weatherList.map((item) => (
+              <WeatherItem
+                onClick={() =>
+                  onChangeInput({
+                    target: {
+                      name: "weatherId",
+                      value: item.weatherId,
+                    },
+                  })
+                }
+                key={item.weatherId}
+                {...item}
+                isSelected={item.weatherId === input.weatherId}
+              />
+            ))}
+          </div>
+        </section>
       </section>
       <section className="emotion_section">
         <h4>오늘의 감정</h4>

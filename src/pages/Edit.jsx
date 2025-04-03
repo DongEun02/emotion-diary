@@ -29,6 +29,7 @@ const Edit = () => {
         params.id,
         input.createdDate.getTime(),
         input.emotionId,
+        input.weatherId,
         input.content
       );
       nav("/", { reaplce: true });

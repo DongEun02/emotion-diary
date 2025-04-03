@@ -34,3 +34,29 @@ textarea {
   display: flex;
   justify-content: space-between;
 }
+
+.Editor .date-weather_section {
+  display: flex;
+  gap: 80px;
+}
+
+.Editor .date-weather_section > section > input {
+  background-color: rgb(236, 236, 236);
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.Editor .date-weather_section > section > h4 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.Editor .date-weather_section .weather_section .weather_list_wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 2%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
