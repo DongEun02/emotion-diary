@@ -52,12 +52,19 @@
   height: 100px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
   background-color: rgb(79, 179, 233);
   border-radius: 5px;
 
   color: white;
   font-size: 20px;
+}
+
+.Viewer .weather_img_wrapper > img {
+  margin: 0 auto;
+  height: 80%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .Viewer .content_wrapper {

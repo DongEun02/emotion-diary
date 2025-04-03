@@ -1,17 +1,25 @@
 .WeatherItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+  align-items: center;
+
   background-color: rgb(236, 236, 236);
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
 
-  width: 45px;
-  height: 35px;
+  aspect-ratio: 1.2 / 1;
+  width: 70%;
+  height: 70%;
+
+  font-size: 80%;
 }
 
 .WeatherItem .weather_img {
   width: 70%;
-  margin-bottom: 2px;
 }
 
 .WeatherItem_on_1 {

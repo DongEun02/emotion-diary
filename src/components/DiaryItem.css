@@ -55,6 +55,12 @@
   font-size: 18px;
 }
 
+.DiaryItem .weather_section {
+  font-size: 18px;
+  height: 50%;
+  width: 20%;
+}
+
 .DiaryItem .button_section {
   min-width: 70px;
 }
